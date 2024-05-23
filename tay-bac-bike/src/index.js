@@ -8,6 +8,7 @@ import App from './App';
 
 import AccessoriesBike from "./routes/accessoriesBike";
 import Motor from "./routes/motor";
+import Home from './routes/home';
 import ElectricBike from './routes/electricBike';
 import IntroPage from './routes/introPage';
 import Register from './routes/register';
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "",
+        element: <Home />,
+      },
       {
         path: "motor",
         element: <Motor />,

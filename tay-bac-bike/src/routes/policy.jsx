@@ -1,7 +1,7 @@
 function Policy() {
     return ( 
         <>
-            <div>
+            <div  className="">
                 ĐÂy là trang chính sách.
             </div>       
         </>
