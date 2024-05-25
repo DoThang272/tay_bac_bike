@@ -8,7 +8,16 @@ module.exports =withMT( {
     "./public/**/*.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      }
+    },
+    colors: {
+      'blue-main': '#00C8F6',
+      'black-main-text': '#646464cc',
+    },
+    
   },
   plugins: [
     require('flowbite/plugin'),
