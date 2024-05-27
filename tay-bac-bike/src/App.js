@@ -57,7 +57,7 @@ function App() {
 
         {/* end login/logout */}
       </div>
-      <div id="body-main" className="flex justify-between items-center mt-3">
+      <div id="body-main" className="flex justify-between sticky top-0 z-40 bg-white items-center mt-3">
         {/* start logo */}
         <div className="">
           <Link to={`/`}>

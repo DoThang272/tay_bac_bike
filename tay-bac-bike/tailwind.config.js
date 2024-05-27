@@ -14,8 +14,9 @@ module.exports =withMT( {
       }
     },
     colors: {
-      'blue-main': '#00C8F6',
+      'blue-main': '#5ECAEE',
       'black-main-text': '#646464cc',
+      'green-main': '#32CD32',
     },
     
   },
