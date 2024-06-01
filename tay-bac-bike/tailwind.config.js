@@ -14,9 +14,10 @@ module.exports =withMT( {
       }
     },
     colors: {
-      'blue-main': '#5ECAEE',
+      'blue-main': '#55d1fa',
       'black-main-text': '#646464cc',
       'green-main': '#32CD32',
+      'blue-main-100': '#e1f6fd',
     },
     
   },

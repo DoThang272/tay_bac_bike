@@ -150,4 +150,24 @@ html {
 .content_center_box {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.icon_style{
+  /* text-[2rem] text-blue-main bg-blue-main-100 p-[1.3rem] rounded-[90px] justify-center items-center */
+  font-size: 1.7rem;
+  color: #55d1fa;
+  background-color: #e1f6fd;
+  padding: 1rem;
+  border-radius: 45%;
+  justify-content: center;
+  align-items: center;
+}
+.text_active_hi:hover{
+  border-bottom: #55d1fa solid 2px;
+  color: #55d1fa;
+  cursor: pointer;
+}
+.text_active_hi:focus{
+  color: #55d1fa;
 }

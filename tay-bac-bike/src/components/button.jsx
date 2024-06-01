@@ -1,6 +1,4 @@
 function Button(props) {
-  console.log(props.dangNhap);
-
   return (
     <>
       <div>

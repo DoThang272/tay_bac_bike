@@ -13,6 +13,9 @@ import ElectricBike from './routes/electricBike';
 import IntroPage from './routes/introPage';
 import Register from './routes/register';
 import Policy from './routes/policy';
+import BuyIntro from './routes/buyIntro';
+import SellIntro from './routes/sellIntro'
+import ExchangeIntro from './routes/exchangeIntro'
 
 import {
   createBrowserRouter,
@@ -27,6 +30,20 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+        children: [
+          {
+            path: "exchangeIntro",
+            element: <ExchangeIntro /> 
+          },
+          {
+            path: "buyIntro",
+            element: <BuyIntro /> 
+          },
+          {
+            path: "sellIntro",
+            element: <SellIntro /> 
+          },
+        ],
       },
       {
         path: "motor",

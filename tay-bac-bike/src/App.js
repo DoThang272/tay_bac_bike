@@ -13,8 +13,6 @@ import facebookLogo from "./images/logoFabook.png";
 import zaloLogo from "./images/logoZalo.png";
 
 function App() {
-  const btnSignIn = "Đăng kí/Đăng nhập";
-  const carouselRef = useRef(null);
   return (
     <>
       <div className="flex justify-center items-center gap-7 bg-blue-main h-[3rem] text-[1.5rem]">
@@ -28,13 +26,13 @@ function App() {
               Liên hệ
             </Link>
           </li>
-          <li className="text-red-500 text-[1.25rem]">Hotline: 0976243569</li>
-          <li>
+          <li className="text-red-500 text-[1.25rem]">Hotline: 0397269518</li>
+          <li className="pl-[1rem]">
             <a target="_blank" href="https://zalo.me/0397269518">
               <img className="h-[1.5rem]" src={zaloLogo} alt="" />
             </a>
           </li>
-          <li>
+          <li className="pl-[1rem]">
             <a
               target="_blank"
               href="https://www.tiktok.com/@do_thang_28?_t=8mcPSlDeCNV&_r=1"
@@ -42,7 +40,7 @@ function App() {
               <img className="h-[1.5rem]" src={tiktokLogo} alt="" />
             </a>
           </li>
-          <li>
+          <li className="pl-[1rem]">
             <a
               target="_blank"
               href="https://www.facebook.com/profile.php?id=100024281364274"
@@ -57,7 +55,7 @@ function App() {
 
         {/* end login/logout */}
       </div>
-      <div id="body-main" className="flex justify-between sticky top-0 z-40 bg-white items-center mt-3">
+      <div id="body-main" className="flex justify-between sticky top-0 z-40 bg-white items-center mt-3 shadow-xl">
         {/* start logo */}
         <div className="">
           <Link to={`/`}>
