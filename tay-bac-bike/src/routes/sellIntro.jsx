@@ -1,6 +1,6 @@
 function SellIntro() {
     return ( <>
-        <div className=" flex bg-blue-main-100 justify-between py-[3rem] rounded-xl">
+        <div className="sell_intro flex w-[100%] bg-blue-main-100 justify-center py-[3rem] rounded-xl">
           <div className="w-[25%] ">
             <i class="fa-solid fa-envelope-open-text flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
             <p className="text-center px-[1rem]">

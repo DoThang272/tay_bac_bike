@@ -10,7 +10,7 @@ function Home() {
     return ( <>
         <Carosuel />
         <div className="w-full">
-            <div className="flex gap-6 h-[16rem] justify-center">
+            <div className="flex gap-6 h-[16rem] mx-[10%] justify-center">
                 <div className="flex bg-[#5ECAEE] text-white overflow-hidden shadow-3xl shadow-blue-main-500/50 rounded-[1rem] w-[32%] pl-[1rem] py-[1rem] relative">
                     <div className='w-[60%] flex flex-wrap content-between'>
                         <div>
@@ -66,7 +66,7 @@ function Home() {
              
         </div>
         {/* Lý do nên mua xe từ chugns tôi */}
-        <div className=" mt-[6rem]">
+        <div className=" mt-[6rem] mx-[10%]">
             <div className="flex justify-center mb-[2.5rem] font-bold text-[2rem]">
                 Tại sao nên mua từ chúng tôi?
             </div>
@@ -122,7 +122,7 @@ function Home() {
         {/* Lý do nên mua xe từ chugns tôi */}
 
         {/* Start mua, bán , trảo đổi xe  */}
-        <div className="mt-[6rem] mb-[6rem]">
+        <div className="mt-[6rem] mb-[6rem] mx-[10%]">
             <div className="mb-[2.5rem] font-bold text-[2rem]">
                 Chúng tôi hoạt động như thế nào?
             </div>

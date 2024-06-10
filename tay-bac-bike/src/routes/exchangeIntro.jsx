@@ -1,6 +1,6 @@
 function ExchangeIntro() {
     return ( <>
-        <div className="flex bg-blue-main-100 py-[3rem] rounded-xl">
+        <div className="flex justify-between w-[100%] bg-blue-main-100 py-[3rem] rounded-xl">
           <div className="w-[25%] ">
             <i class="fa-solid fa-window-restore flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
             <p className="text-center px-[1rem]">

@@ -8,12 +8,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectFade,  } from 'swiper/modules';
 
-import carousel7 from "../images/carousel8.jpg";
-import carousel2 from "../images/carousel2.jpg";
-import carousel3 from "../images/carousel0.jpg";
-import carousel4 from "../images/carousel4.jpg";
-import carousel5 from "../images/carousel4.jpg";
-import carousel6 from "../images/carousel4.jpg";
+import carousel7 from "../images/banner_carou1.jpg";
+import carousel2 from "../images/banner_carou2.jpg";
+import carousel3 from "../images/banner_carou3.jpg";
+import carousel4 from "../images/banner_carou4.jpg";
+import carousel5 from "../images/banner_carou5.jpg";
+import carousel6 from "../images/banner_carou6.jpg";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft  } from "react-icons/fa";
 
@@ -23,8 +23,8 @@ function Carosuel() {
       ];
   return (
     <>
-      <div className="container">
-        <div className="heading [w-100%]">
+      {/* <div className="container"> */}
+        {/* <div className="heading [w-100%]"> */}
           <Swiper
             modules={[
               Navigation,
@@ -80,7 +80,7 @@ function Carosuel() {
               <img src={carousel6} alt="slide_image" />
             </SwiperSlide>
 
-            <div className="slider-controler">
+            <div className=" slider-controler">
               <div className="swiper-button-prev slider-arrow">
                 <FaRegArrowAltCircleLeft />
               </div>
@@ -90,8 +90,8 @@ function Carosuel() {
               <div className="swiper-pagination"></div>
             </div>
           </Swiper>
-        </div>
-      </div>
+        {/* </div> */}
+      {/*  </div> */}
     </>
   );
 }
