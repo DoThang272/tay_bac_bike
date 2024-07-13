@@ -18,6 +18,8 @@ module.exports =withMT( {
       'black-main-text': '#646464cc',
       'green-main': '#32CD32',
       'blue-main-100': '#e1f6fd',
+      'blue-main-50': '#F6FCFE',
+      'orange-main': '#FF4F17'
     },
     
   },

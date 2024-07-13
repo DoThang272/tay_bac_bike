@@ -15,8 +15,8 @@ body {
 }
 
 #body-main{
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 /* #body-content{
   margin-left: 15%;
@@ -170,8 +170,12 @@ html {
 }
 .text_active_hi:focus{
   color: #55d1fa;
+  border-bottom: #55d1fa solid 2px;
 }
 
 .sell_intro{
   width: 100%;
+}
+table tr td{
+  padding: 8px;
 }

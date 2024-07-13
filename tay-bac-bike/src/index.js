@@ -13,15 +13,13 @@ import ElectricBike from './routes/electricBike';
 import IntroPage from './routes/introPage';
 import Register from './routes/register';
 import Policy from './routes/policy';
-import BuyIntro from './routes/buyIntro';
-import SellIntro from './routes/sellIntro'
-import ExchangeIntro from './routes/exchangeIntro'
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
+import OldBike from './routes/oldBike';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,24 +28,28 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
-        children: [
-          {
-            path: "exchangeIntro",
-            element: <ExchangeIntro /> 
-          },
-          {
-            path: "buyIntro",
-            element: <BuyIntro /> 
-          },
-          {
-            path: "sellIntro",
-            element: <SellIntro /> 
-          },
-        ],
+        // children: [
+        //   {
+        //     path: "exchangeIntro",
+        //     element: <ExchangeIntro /> 
+        //   },
+        //   {
+        //     path: "buyIntro",
+        //     element: <BuyIntro /> 
+        //   },
+        //   {
+        //     path: "sellIntro",
+        //     element: <SellIntro /> 
+        //   },
+        // ],
       },
       {
         path: "motor",
         element: <Motor />,
+      },
+      {
+        path: "oldBike",
+        element: <OldBike />,
       },
       {
         path: "electricBike",

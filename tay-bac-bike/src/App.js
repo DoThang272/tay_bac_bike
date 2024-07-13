@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import logo from "./images/image.png";
+import logo from "./images/image.JPG";
 import tiktokLogo from "./images/logoTiktok.png";
 import facebookLogo from "./images/logoFabook.png";
 import zaloLogo from "./images/logoZalo.png";
@@ -18,7 +18,7 @@ function App() {
       <div className="flex justify-center items-center gap-7 bg-blue-main h-[3rem] text-[1.5rem]">
         <div>
           Cửa hàng sửa chữa mua bán, trao đổi xe máy, xe máy điện{" "}
-          <strong className="text-red-500"> Quang Đạo</strong>
+          <strong className="text-red-500">Quang Đạo</strong>
         </div>
         <div className="flex gap-2 items-center font-bold">
           <li>
@@ -26,9 +26,9 @@ function App() {
               Liên hệ
             </Link>
           </li>
-          <li className="text-red-500 text-[1.25rem]">Hotline: 0397269518</li>
+          <li className="text-red-500 text-[1.25rem]">Hotline: 0976243569</li>
           <li className="pl-[1rem]">
-            <a target="_blank" href="https://zalo.me/0397269518">
+            <a target="_blank" href="https://zalo.me/0976243569">
               <img className="h-[1.5rem]" src={zaloLogo} alt="" />
             </a>
           </li>
@@ -80,7 +80,13 @@ function App() {
               className="hover:text-blue-main hover:border-b-[2px] hover:border-b-blue-main  focus:text-blue-main focus:shadow-lg focus:shadow-blue-main/50 "
               to={`electricBike`}
             >
-              Xe máy điện
+              Xe điện
+            </Link>
+            <Link
+              className="hover:text-blue-main hover:border-b-[2px] hover:border-b-blue-main  focus:text-blue-main focus:shadow-lg focus:shadow-blue-main/50 "
+              to={`oldBike`}
+            >
+              Xe máy cũ
             </Link>
             <Link
               className="hover:text-blue-main hover:border-b-[2px] hover:border-b-blue-main  focus:text-blue-main focus:shadow-lg focus:shadow-blue-main/50 "

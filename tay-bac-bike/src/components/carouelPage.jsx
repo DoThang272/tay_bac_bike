@@ -80,7 +80,7 @@ function Carosuel() {
               <img src={carousel6} alt="slide_image" />
             </SwiperSlide>
 
-            <div className=" slider-controler">
+            {/* <div className=" slider-controler">
               <div className="swiper-button-prev slider-arrow">
                 <FaRegArrowAltCircleLeft />
               </div>
@@ -88,7 +88,7 @@ function Carosuel() {
                 <FaRegArrowAltCircleRight />
               </div>
               <div className="swiper-pagination"></div>
-            </div>
+            </div> */}
           </Swiper>
         {/* </div> */}
       {/*  </div> */}

@@ -1,16 +1,89 @@
 import { Outlet, Link } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
 import Button from "../components/button";
+import { SiZalo } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 import Carosuel from "../components/carouelPage";
 import buyMotor1 from "../images/buyMotor.png";
 import buyMotor2 from "../images/xeCub.png";
 import buyMotor3 from "../images/cbr150.png";
+import ElementDetailBox from '../components/elementDetail.jsx'
+import ElectricBikeDetail from "../components/electricBikeDetail.jsx";
+
 
 function Home() {
+    const sellIntro = function(){
+        const changeLogo1 = document.querySelector('.logoHowActive1');
+        const changeLogo2 = document.querySelector('.logoHowActive2');
+        const changeLogo3 = document.querySelector('.logoHowActive3');
+        const changeLogo4 = document.querySelector('.logoHowActive4');
+        console.log("do THang");
+        document.querySelector('.textHowActive1').innerHTML = "Gửi thông tin của bạn để đặt lịch thẩm định xe tận nơi"; 
+        document.querySelector('.textHowActive2').innerHTML = "Thẩm định xe máy của bạn"; 
+        document.querySelector('.textHowActive3').innerHTML = "Nhận báo giá ngay tại chỗ"; 
+        document.querySelector('.textHowActive4').innerHTML = "Chúng tôi sẽ làm thủ tục giấy tờ & bạn lo chi phí!"; 
 
+        changeLogo1.classList.replace("fa-calendar-check" , "fa-envelope-open-text")
+        changeLogo1.classList.replace("fa-window-restore" , "fa-envelope-open-text")
+        changeLogo2.classList.replace("fa-heart-circle-check" , "fa-magnifying-glass-chart")
+        changeLogo2.classList.replace("fa-gear" , "fa-magnifying-glass-chart")
+        changeLogo3.classList.replace("fa-file-lines" , "fa-comments-dollar")
+        changeLogo3.classList.replace("fa-credit-card" , "fa-comments-dollar")
+        changeLogo4.classList.replace("fa-file-circle-check" , "fa-sack-dollar")
+        changeLogo4.classList.replace("fa-house-user" , "fa-sack-dollar")
+    }
+    const clearClassIntro  = function(){
+        const changeLogo1 = document.querySelector('.logoHowActive1');
+        const changeLogo2 = document.querySelector('.logoHowActive2');
+        const changeLogo3 = document.querySelector('.logoHowActive3');
+        const changeLogo4 = document.querySelector('.logoHowActive4');
+        document.querySelector('.textHowActive1').innerHTML = "Tìm kiếm sản phẩm trong danh mục của chúng tôi"; 
+        document.querySelector('.textHowActive2').innerHTML = "Đặt lịch lái thử miễn phí tại cửa hàng của chúng tôi"; 
+        document.querySelector('.textHowActive3').innerHTML = "Thanh toán đầy đủ hoặc lựa chọn trả góp"; 
+        document.querySelector('.textHowActive4').innerHTML = "Tận hưởng chuyến đi của bạn với chính sách 6 tháng bảo hành";
+        changeLogo1.classList.replace("fa-envelope-open-text" , "fa-calendar-check")
+        changeLogo1.classList.replace("fa-window-restore" , "fa-calendar-check")
+
+        changeLogo2.classList.replace("fa-heart-circle-check" , "fa-gear")
+        changeLogo2.classList.replace("fa-magnifying-glass-chart" , "fa-gear")
+        
+        changeLogo3.classList.replace("fa-comments-dollar" , "fa-credit-card")
+        changeLogo3.classList.replace("fa-file-lines" , "fa-credit-card")
+        changeLogo4.classList.replace("fa-sack-dollar" , "fa-file-circle-check")
+        changeLogo4.classList.replace("fa-house-user" , "fa-file-circle-check")
+
+    }
+    const exchangeIntro  = function(){
+        const changeLogo1 = document.querySelector('.logoHowActive1');
+        const changeLogo2 = document.querySelector('.logoHowActive2');
+        const changeLogo3 = document.querySelector('.logoHowActive3');
+        const changeLogo4 = document.querySelector('.logoHowActive4');
+        document.querySelector('.textHowActive1').innerHTML = "Gửi thông tin xe máy của bạn và đặt lịch thẩm định"; 
+        document.querySelector('.textHowActive2').innerHTML = "Chọn chiếc xe máy bạn muốn"; 
+        document.querySelector('.textHowActive3').innerHTML = "Đăng ký lái thử và chuẩn bị hồ sơ"; 
+        document.querySelector('.textHowActive4').innerHTML = "Chọn nhận xe tại cửa hàng hoặc tại nhà"; 
+
+        changeLogo1.classList.replace("fa-calendar-check" , "fa-window-restore")
+        changeLogo1.classList.replace("fa-envelope-open-text" , "fa-window-restore")
+
+        changeLogo2.classList.replace("fa-gear" , "fa-heart-circle-check")
+        changeLogo2.classList.replace("fa-magnifying-glass-chart" , "fa-heart-circle-check")
+        
+        changeLogo3.classList.replace("fa-comments-dollar" , "fa-file-lines")
+        changeLogo3.classList.replace("fa-credit-card" , "fa-file-lines")
+        
+        changeLogo4.classList.replace("fa-sack-dollar" , "fa-house-user")
+        changeLogo4.classList.replace("fa-file-circle-check" , "fa-house-user")
+
+
+    }
     return ( <>
         <Carosuel />
         <div className="w-full">
-            <div className="flex gap-6 h-[16rem] mx-[10%] justify-center">
+            <div className="flex gap-6 h-[16rem] mx-[15%] justify-center">
                 <div className="flex bg-[#5ECAEE] text-white overflow-hidden shadow-3xl shadow-blue-main-500/50 rounded-[1rem] w-[32%] pl-[1rem] py-[1rem] relative">
                     <div className='w-[60%] flex flex-wrap content-between'>
                         <div>
@@ -66,7 +139,7 @@ function Home() {
              
         </div>
         {/* Lý do nên mua xe từ chugns tôi */}
-        <div className=" mt-[6rem] mx-[10%]">
+        <div className=" mt-[6rem] mx-[15%]">
             <div className="flex justify-center mb-[2.5rem] font-bold text-[2rem]">
                 Tại sao nên mua từ chúng tôi?
             </div>
@@ -122,29 +195,147 @@ function Home() {
         {/* Lý do nên mua xe từ chugns tôi */}
 
         {/* Start mua, bán , trảo đổi xe  */}
-        <div className="mt-[6rem] mb-[6rem] mx-[10%]">
+        <div className="mt-[6rem] mb-[6rem] mx-[15%]">
             <div className="mb-[2.5rem] font-bold text-[2rem]">
                 Chúng tôi hoạt động như thế nào?
             </div>
-            <div className="flex justify-center gap-[11rem]">
-                <Link to={`buyIntro`}>
-                    <div className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi">Mua</div> 
-                </Link>
-                <Link to={`sellIntro`}>
-                    <div className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi" >Bán</div>
-                </Link>
-                <Link to={`exchangeIntro`}>
-                    <div className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi" >Trao đổi</div>
-                </Link>
+            <div className="flex w-[100%] justify-center ">
+                <button  onClick={clearClassIntro}  className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi  ">
+                    Mua
+                </button >
+                <button onClick={sellIntro} className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi ">
+                    Bán
+                </button>
+                <button onClick={exchangeIntro} className="text-[1.5rem] font-bold pb-1rem px-[2rem] border-b-[2px] border-b-white box-border text_active_hi ">
+                    Trao đổi
+                </button>
             </div>
-            <div className="flex bg-blue-main-100 py-[3rem] rounded-xl">
-                <Outlet />
+            <div className="flex justify-center gap-[11rem]">
+                <div className="flex justify-between w-[100%] bg-blue-main-100 py-[3rem] rounded-xl">
+
+                    <div className="w-[25%] ">
+                        <i class="logoHowActive1 fa-solid fa-calendar-check flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
+                        <p id="" className="textHowActive12 textHowActive1 text-center px-[1rem]">
+                        Tìm kiếm sản phẩm trong danh mục của chúng tôi
+                        </p>
+                        
+                    </div>
+                    <div className="w-[25%] ">
+                        <i class="logoHowActive2 fa-solid fa-gear flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
+                        <p className="textHowActive2 text-center">
+                        Đặt lịch lái thử miễn phí tại cửa hàng của chúng tôi
+                        </p>
+                    </div>
+                    <div className="w-[25%] ">
+                        <i class="logoHowActive3 fa-solid fa-credit-card flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
+                        <p className="textHowActive3 text-center">
+                        Thanh toán đầy đủ hoặc lựa chọn trả góp
+                        </p>
+                    </div>
+                    <div className="w-[25%] ">
+                        <i class="logoHowActive4 fa-solid fa-file-circle-check flex justify-center text-[2.8rem] text-blue-main p-[1rem]"></i>
+                        <p className="textHowActive4 text-center px-[1rem]">
+                        Tận hưởng chuyến đi của bạn với chính sách 6 tháng bảo hành
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div className="mt-[6rem]">
-            as 
+        <div className="mt-[6rem] mb-[6rem] mx-[15%]">
+            <div className="mb-[2.5rem] font-bold text-[2rem]">
+                Sản phẩm xe cũ giá rẻ chất lượng tốt.
+            </div>
+            <div className="grid grid-cols-5 gap-2">
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                <ElementDetailBox />
+                
+            </div>
+            <Link to={`oldBike`}>
+                <div className="flex justify-center my-[2rem] text-[1.5rem] hover:text-blue-main">Xem thêm</div>
+            </Link>
+        </div>
+        <div className="mt-[6rem] mb-[6rem] mx-[15%]">
+            <div className="mb-[2.5rem] font-bold text-[2rem]">
+                Xe điện giá tốt pin khỏe.
+            </div>
+            <div className="grid grid-cols-5 gap-2">
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                <ElectricBikeDetail />
+                
+            </div>
+            <Link to={`electricBike`}>
+                <div className="flex justify-center my-[2rem] text-[1.5rem] hover:text-blue-main">Xem thêm</div>
+            </Link>
         </div>
         {/* End mua, bán , trảo đổi xe  */}
+
+        {/* Start Fotter */}
+        <div className="bg-blue-main-50 px-[15%] mb-[1rem] flex justify-between">
+            <div className="">
+                <div className="text-[2rem] text-green-main">
+                    Xe máy xe điện Quang Đạo
+                </div>      
+                <div className="text-[1.2rem] ">Liên hệ với chúng tôi để được tư vấn và sửa chữa, mua, bán, bảo dưỡng xe máy xe điện.</div>      
+                <table className="mb-[1rem] ">
+                    <tr className="bg-blue-gray-50">
+                        <td className="flex items-center gap-1"><BsFillTelephoneFill />Tel:</td>
+                        <td>    0976243569</td>
+                    </tr>
+                    <tr>
+                        <td className="flex items-center gap-1"><FaFacebook />Facebook:</td>
+                        <td>Đỗ Quang Đạo (id: 100033639080916)</td>
+                    </tr>
+                    <tr className="bg-blue-gray-50">
+                        <td className="flex items-center gap-1"><SiZalo />Zalo:</td>
+                        <td>    0976243569</td>
+                    </tr>
+                    <tr>
+                        <td className="flex items-center gap-1"><MdEmail />Email:</td>
+                        <td>    Doanhthang16@gmail.com</td>
+                    </tr>
+                    <tr className="bg-blue-gray-50">
+                        <td className="flex items-center gap-1"><FaLocationDot />Address:</td>
+                        <td>    Tk Quyết Thắng, Cò Nòi, Mai Sơn, Sơn La</td>
+                    </tr>
+                </table>
+                <div className="w-full">
+                    <div className="text-[1.2rem] mb-[0.5rem]">Truy cập nhanh danh mục</div>
+                    <div className="flex w-full">
+                        <div className="w-[30%] grid gap-3">
+                            <div className="bg-blue-gray-50">Xe máy</div>
+                            <div>Xe điện</div>
+                            <div className="bg-blue-gray-50">Xe máy cũ</div>
+                        </div>
+                        <div className=" grid gap-3 w-[30%]">
+                            <div>Phụ tùng, phụ kiện</div>
+                            <div className="bg-blue-gray-50">Giới thiệu về cửa hàng</div>
+                            <div>Chính sách</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div className="flex float-right ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.061785285643!2d104.17740927530765!3d21.110102784979688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3132510073731127%3A0x1f17abc25eeee702!2zWGUgbcOheSBxdWFuZyDEkeG6oW8!5e0!3m2!1svi!2s!4v1720583488821!5m2!1svi!2s" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+        <div className="flex justify-center bg-black-main-text text-white py-[1rem]">
+            Coppy right by Do Thang cute dep trai
+        </div>
+        {/* End Fotter */}
     </> );
 }
 
