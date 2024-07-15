@@ -28,20 +28,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
-        // children: [
-        //   {
-        //     path: "exchangeIntro",
-        //     element: <ExchangeIntro /> 
-        //   },
-        //   {
-        //     path: "buyIntro",
-        //     element: <BuyIntro /> 
-        //   },
-        //   {
-        //     path: "sellIntro",
-        //     element: <SellIntro /> 
-        //   },
-        // ],
       },
       {
         path: "motor",
