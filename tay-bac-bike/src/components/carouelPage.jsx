@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay,Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay,Thumbs, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -30,29 +30,24 @@ function Carosuel() {
               Navigation,
               Pagination,
               Scrollbar,
-              A11y,
               EffectFade,
               Autoplay,
               Thumbs,
+              EffectCoverflow
             ]}
+            spaceBetween={50}
+            slidesPerView={"auto"}
             effect={"fade"}
             grabCursor={true}
             centeredSlides={false}
-            spaceBetween={50}
-            slidesPerView={"auto"}
             thumbs={true}
+            speed={3000}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
             }}
             loop={true}
             scrollbar={{ draggable: true }}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
             pagination={{ el: ".swiper-pagination", clickable: true }}
             navigation={{
               nextEl: ".swiper-button-next",
